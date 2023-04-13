@@ -4,9 +4,9 @@ It was created by Barbora Bromová, Markéta Ovečková, and Šimon Trlifaj for 
 
 ## Contents
 This repository includes:
-- Web scraping pipeline of Amazon product pages based on search keyword (Amazon_webscrape.ipynb)
-- Analysis of product descriptions and perceived harmfulness (Amazon_greenwashing_analysis.ipynb)
-- Analysis of topic modelling in product descriptions (Latent_Dirichlet_Analysis_on_product_descriptions.ipynb)
+- Web scraping pipeline of Amazon product pages based on search keyword ([Amazon_webscrape.ipynb](Amazon_webscrape.ipynb))
+- Analysis of product descriptions and perceived harmfulness ([Amazon_greenwashing_analysis.ipynb](Amazon_greenwashing_analysis.ipynb))
+- Analysis of topic modelling in product descriptions ([Latent_Dirichlet_Analysis_on_product_descriptions.ipynb](Latent_Dirichlet_Analysis_on_product_descriptions.ipynb))
 
 ## Introduction
 While the term ‘digital public space’ is usually thought to refer to online spaces specifically designed for social interaction (such as social media sites, forums, chatrooms, or blogs), a significant amount of substantive online interactions takes place in commercial contexts. Perhaps chief among the online marketplaces, Amazon.com is among the Internet’s biggest commercial platforms. Having started as an online bookstore, the company has quickly gained prominence as the quintessential online marketplace and currently carries near-all categories of consumer products from its own inventory as well as third-party sellers. 
