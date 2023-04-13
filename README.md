@@ -35,14 +35,14 @@ While Amazon.com remains a widely accessible online marketplace, gaining access 
 ### Unsupervised topic modelling using Latent Dirichlet Allocation
 To identify the topics present throughout scraped product descriptions, this analysis used latent dirichlet analysis (‘LDA’). LDA is an unsupervised topic modelling method commonly used for identifying and exploring latent topics across smaller text corpuses, classifying tokens and thus grouping textual data into groups according to patterns which often fall below the threshold of human recognition. This method – and its associated Python libraries, such as pyLDAvis – ensures that documents can be assigned to topics, topics themselves can be identified, revised, and visualised in relation to each other. In addition, this method also allows for new synthetic documents to be created to precisely reflect the topic distribution present in the original training corpus. 
 
-The notebook Latent_Dirichlet_Analysis_on_product_descriptions.ipynb includes codes used in this method.
+The notebook [Latent_Dirichlet_Analysis_on_product_descriptions.ipynb](Latent_Dirichlet_Analysis_on_product_descriptions.ipynb) includes codes used in this method.
 
 ### ‘Green’ compensation of non-ecological word embeddings
 To measure the use of green adjectives to compensated for perceived harmfulness of products, this analysis developed two metrics based on word embeddings: a measure of perceived harmfulness to the environment, and a predefined corpus of greenwashing vocabulary to account for compensatory occurrence. 
 
 First, the Wikipedia-trained language model glove-wiki-gigaword-100 was used to create a measurement of perceived harmfulness of product categories. The main axis was created by taking the mean vector of a group of words with negative ecological connotations (such as pollution, chemical, deforestation, etc.), and another with positive connotations (sustainable, ecology, nature, etc.). The product categories were then given a score depending on how close they would be to one or the other, and ranked accordingly. Second, this analysis counted the average frequency of adjectives that tend to appear when emphasising the environmentally friendly (or ‘green’) properties of a product (such as eco, bio, green, renewable, etc.). This frequency was then correlated with the perceived negative ecological connotation and the use of green adjectives.
 
-The notebook Amazon_greenwashing_analysis.ipynb includes codes used in this method.
+The notebook [Amazon_greenwashing_analysis.ipynb](Amazon_greenwashing_analysis.ipynb) includes codes used in this method.
 
 ## Analysis
 ### H1: Unsupervised topic modelling does not capture an explicit ecological discourse
