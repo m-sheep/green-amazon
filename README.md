@@ -1,5 +1,5 @@
 # Amazon Greenwashing Analysis
-This repository contains an analysis of ‘greenness’ in product descriptions of household products and their online marketing.
+This repository contains an analysis of ‘green' discourses and greenwashing vocabulary in product descriptions of household products and their online marketing within commercial online spaces.
 It was created by Barbora Bromová, Markéta Ovečková, and Šimon Trlifaj for the 2023 CIVICA course Diving in the Digital Public Space.
 
 ## Contents
@@ -16,7 +16,7 @@ It was created by Barbora Bromová, Markéta Ovečková, and Šimon Trlifaj for 
 - [H3: No evidence for systematic compensation for ecologically harmful word embeddings](#h3)
 6. [Conclusion](##Conclusion)
 
-This repository also includes:
+This repository also includes Python notebooks for the following projects:
 - Web scraping pipeline of Amazon product pages based on search keyword ([Amazon_webscrape.ipynb](Amazon_webscrape.ipynb))
 - Analysis of product descriptions and perceived harmfulness ([Amazon_greenwashing_analysis.ipynb](Amazon_greenwashing_analysis.ipynb))
 - Analysis of topic modelling in product descriptions ([Latent_Dirichlet_Analysis_on_product_descriptions.ipynb](Latent_Dirichlet_Analysis_on_product_descriptions.ipynb))
@@ -50,7 +50,7 @@ While Amazon.com remains a widely accessible online marketplace, gaining access 
 ### Unsupervised topic modelling using Latent Dirichlet Allocation
 To identify the topics present throughout scraped product descriptions, this analysis used latent dirichlet analysis (‘LDA’). LDA is an unsupervised topic modelling method commonly used for identifying and exploring latent topics across smaller text corpuses, classifying tokens and thus grouping textual data into groups according to patterns which often fall below the threshold of human recognition. This method – and its associated Python libraries, such as pyLDAvis – ensures that documents can be assigned to topics, topics themselves can be identified, revised, and visualised in relation to each other. In addition, this method also allows for new synthetic documents to be created to precisely reflect the topic distribution present in the original training corpus. 
 
-The notebook [Latent_Dirichlet_Analysis_on_product_descriptions.ipynb](Latent_Dirichlet_Analysis_on_product_descriptions.ipynb) includes codes used in this method.
+The notebook [Latent_Dirichlet_Analysis_on_product_descriptions.ipynb](Latent_Dirichlet_Analysis_on_product_descriptions.ipynb) includes code used for this method.
 
 <a name="green"></a>
 ### ‘Green’ compensation of non-ecological word embeddings
@@ -100,7 +100,7 @@ Our third hypothesis anticipated a (somewhat) linear positive trend between a pr
 The notebook [Amazon_greenwashing_analysis.ipynb](Amazon_greenwashing_analysis.ipynb) includes codes used for this analysis.
 
 ## Conclusion
-This analysis found that even though ‘green’ words did feature in product descriptions and their prevalence varies across product search terms, there was no systematically identifiable greenwashing discourse – at least not one that is consistent across product categories. To this extent, we were not able to support our initial hypotheses, with the exception of Hypothesis 2: in the dataset, there was some evidence that product categories vary when it comes to their prevalence of greenwashing discourses. The pattern we anticipated – a systematic compensation for environmentally-unfriendly word embeddings – was not demonstrated in this analysis.
+This analysis found that even though ‘green’ words did feature in product descriptions and their prevalence varies across product search terms, there was no systematically identifiable greenwashing discourse – at least not one that is consistent across product categories as anticipated. To this extent, we were not able to support our initial hypotheses, with the exception of Hypothesis 2: in the dataset, there was some evidence that product categories vary when it comes to their prevalence of greenwashing discourses. The pattern we anticipated – a systematic compensation for environmentally-unfriendly word embeddings – was not demonstrated in this analysis.
 
 There may be multiple reasons for this, as this analysis is rather limited in its scope. It may be that sellers do not compensate for the perceived harmfulness of a product in the hypothesised way. Alternatively, it may be possible that this analysis included too diverse of a product range or that a greenwashing compensation occurs with visual cues rather than within textual product descriptions. Future research endeavours could explore these elements of online product marketing and sustainability further, particularly when it comes to visual expression and packaging representation of products. 
 
