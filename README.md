@@ -5,7 +5,7 @@ It was created by Barbora Bromová, Markéta Ovečková, and Šimon Trlifaj for 
 ## Contents
 
 1. [Introduction](##Introduction)
-2. [Research questions & Hypotheses](##Research question & Hypotheses)
+2. [Research questions & Hypotheses](#rq)
 3. [Data](##Data)
 4. [Method](##Method)
 4.1 [Unsupervised topic modelling using Latent Dirichlet Allocation](#lda)
@@ -30,6 +30,7 @@ Yet limited literature exists when it comes to systematically analysing the othe
 
 The topic of sustainability has been gaining prominence in recent years, and the field of e-commerce has seen its fair share of green-washing attempts. In addition to serving as a platform and e-commerce marketplace where sellers present – and thus also greenwash – their goods independently, Amazon as a company has also realised brand value through multiple sustainability commitments, including the The Climate Pledge in 2019 (Sands & Morison, 2020). Yet simultaneously with these sustainability commitments, the company has also relaxed its internal guidelines toward third-party sellers and became recognisably more lenient with cross-border imports (Pinnamaneni, 2018). This shift was also partly reflected in consumers’ experience: despite an apparent increase in the supply and diversity of goods, there seemed to be a shift in discourse and marketing conventions on the platform (Pinnamaneni, 2018). Over time, the names and descriptions of products became longer and less intuitive, serving as catch-all for relevant keywords and aiding search engine optimisation. Yet could these new naming practices be informed by new values, such as sustainability? This analysis intends to investigate the discourse present within product descriptions on Amazon.com, focusing particularly on their attention to eco-friendliness.
 
+<a name="rq"></a>
 ## Research question & Hypotheses
 As sustainability concerns gain a greater visibility in public discourse, there appears to be increased pressure on industry to follow suit and minimise the adverse ecological impact of their products (Sands & Morison, 2020). The field of e-commerce is no exception in this context. In addition to serving as a platform and e-commerce marketplace where sellers present (and thus also ‘greenwash’) their goods independently, Amazon as a company has also realised brand value through multiple sustainability commitments, including the The Climate Pledge in 2019 (Sands & Morison, 2020).
 
