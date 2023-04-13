@@ -50,9 +50,13 @@ In addressing the first research question, a latent dirichlet allocation model c
 
 ![wordcloud on  'product_description'](https://user-images.githubusercontent.com/115785307/231808831-35550f60-4525-4749-8b24-f403dfcd388d.png)
 
+*Figure 1: A WordCloud generated on a dataset of product descriptions.*
+
 The final configuration of our model identified 7 topics, with α = 0.31 and β = 0.91. These parameters increased the model’s initial coherence score of 34.3% by almost double, to a final coherence score of 59.04%. To explore the topic inter-relations, we generated a visualisation of relative inter-topic distance.
 
 ![improved model](https://user-images.githubusercontent.com/115785307/231810267-4de924a8-b3e2-4f6c-9bee-7a4a794a4cd2.png)
+
+*Figure 2: A visualisation of relative intertopic distance of the final LDA model.*
 
 While the model seemed to identify three main topic clusters, it did not pick up on a topic that could be categorised as specifica ecological. In this sense, unsupervised topic modelling could not support our hypothesis that there exists a (machine-) identifiable environmental or ‘greenwashing’ discourse in product descriptions on Amazon.com. However, it should be noted that the model did seem to pick up on a measure of naturalness or healthiness in the topic clusters, sorting them left to right from the most healthy and clean (eg. the most relevant terms of Topic 1 included ‘free’, ‘clean’, ‘safe’ and ‘water’), to artificial and harmful (eg. the most relevant terms for Topic 7 included ‘bacteria’, ‘disinfectant’, ‘germs’ and ‘viruses’). 
 
@@ -63,10 +67,14 @@ To address the second hypothesis, we used a pre-defined corpus of greenwashing v
 
 ![greenwashing visualisation](https://user-images.githubusercontent.com/115785307/231810648-8ac0dde7-f7bb-493b-8b20-0f90b3d902ca.png)
 
+*Figure 3: A visualisation of greenwashing frequencies per search keyword.*
+
 ### H3: No evidence for systematic compensation for ecologically harmful word embeddings
 The third and final section of our analysis set out to investigate whether a more frequent use of greenwashing vocabulary could be in response to the non-environmental associations a product category inspires, as anticipated by the third hypothesis. First, we sorted the dataset’s search keywords onto a word vector thought to symbolise their extent of implied environmental harm, and plotted the average frequency of greenwashing words in their product descriptions.
 
 ![compensation graph](https://user-images.githubusercontent.com/115785307/231811023-7f074acf-5b76-4f99-acb4-cb67ff654e4f.png)
+
+*Figure 4: A visualisation of greenwashing compensation (Hypothesis 3).*
 
 Our third hypothesis anticipated a (somewhat) linear positive trend between a product category’s perceived environmental harm gleaned from word embeddings and its prevalence of greenwashing terms. We did not find such a trend. The outliers we found – such as laundry products, which showed the highest frequency of greenwashing terms – were relatively neutral in terms of their word embeddings. 
 
