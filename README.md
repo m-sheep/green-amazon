@@ -8,12 +8,12 @@ It was created by Barbora Bromová, Markéta Ovečková, and Šimon Trlifaj for 
 2. [Research questions & Hypotheses](#rq)
 3. [Data](##Data)
 4. [Method](##Method)
-4.1 [Unsupervised topic modelling using Latent Dirichlet Allocation](#lda)
-4.2 [‘Green’ compensation of non-ecological word embeddings](#green)
+    4.1 [Unsupervised topic modelling using Latent Dirichlet Allocation](#lda)
+    4.2 [‘Green’ compensation of non-ecological word embeddings](#green)
 5. [Analysis](##Analysis)
-5.1 [H1: Unsupervised topic modelling does not capture an explicit ecological discourse](#h1)
-5.2 [H2: There is some variation in the prevalence of ecological words across product categories](#h2)
-5.3 [H3: No evidence for systematic compensation for ecologically harmful word embeddings](#h3)
+    5.1 [H1: Unsupervised topic modelling does not capture an explicit ecological discourse](#h1)
+    5.2 [H2: There is some variation in the prevalence of ecological words across product categories](#h2)
+    5.3 [H3: No evidence for systematic compensation for ecologically harmful word embeddings](#h3)
 6. [Conclusion](##Conclusion)
 
 This repository also includes:
