@@ -6,6 +6,15 @@ It was created by Barbora Bromová, Markéta Ovečková, and Šimon Trlifaj for 
 
 1. [Introduction](##Introduction)
 2. [Research questions & Hypotheses](##Research question & Hypotheses)
+3. [Data](##Data)
+4. [Method](##Method)
+4.1 [Unsupervised topic modelling using Latent Dirichlet Allocation](#lda)
+4.2 [‘Green’ compensation of non-ecological word embeddings](#green)
+5. [Analysis](##Analysis)
+5.1 [H1: Unsupervised topic modelling does not capture an explicit ecological discourse](#h1)
+5.2 [H2: There is some variation in the prevalence of ecological words across product categories](#h2)
+5.3 [H3: No evidence for systematic compensation for ecologically harmful word embeddings](#h3)
+6. [Conclusion](##Conclusion)
 
 This repository also includes:
 - Web scraping pipeline of Amazon product pages based on search keyword ([Amazon_webscrape.ipynb](Amazon_webscrape.ipynb))
@@ -36,11 +45,13 @@ While there is an ongoing debate about the practical impact of sustainability co
 While Amazon.com remains a widely accessible online marketplace, gaining access to its data for analysis is not trivial. Amazon does offer automated data access through a dedicated API, yet this application is not intended for research and exists primarily as a service for Amazon third-party sellers. The data used for this analysis were therefore web-scraped using the Requests library version 2.28.0; the relevant code is available in the ‘[Amazon_webscrape.ipynb](Amazon_webscrape.ipynb)’ notebook. Scraping results were saved in a compressed file named products.csv.gz, which contained 4,014 product pages over 71 pre-defined categories of household products. Each product page observation included the relevant search keyword, product name, product description, brand name, product page url, and webpage. 
 
 ## Method
+<a name="lda"></a>
 ### Unsupervised topic modelling using Latent Dirichlet Allocation
 To identify the topics present throughout scraped product descriptions, this analysis used latent dirichlet analysis (‘LDA’). LDA is an unsupervised topic modelling method commonly used for identifying and exploring latent topics across smaller text corpuses, classifying tokens and thus grouping textual data into groups according to patterns which often fall below the threshold of human recognition. This method – and its associated Python libraries, such as pyLDAvis – ensures that documents can be assigned to topics, topics themselves can be identified, revised, and visualised in relation to each other. In addition, this method also allows for new synthetic documents to be created to precisely reflect the topic distribution present in the original training corpus. 
 
 The notebook [Latent_Dirichlet_Analysis_on_product_descriptions.ipynb](Latent_Dirichlet_Analysis_on_product_descriptions.ipynb) includes codes used in this method.
 
+<a name="green"></a>
 ### ‘Green’ compensation of non-ecological word embeddings
 To measure the use of green adjectives to compensated for perceived harmfulness of products, this analysis developed two metrics based on word embeddings: a measure of perceived harmfulness to the environment, and a predefined corpus of greenwashing vocabulary to account for compensatory occurrence. 
 
@@ -49,6 +60,7 @@ First, the Wikipedia-trained language model [glove-wiki-gigaword-100](https://hu
 The notebook [Amazon_greenwashing_analysis.ipynb](Amazon_greenwashing_analysis.ipynb) includes codes used in this method.
 
 ## Analysis
+<a name="h1"></a>
 ### H1: Unsupervised topic modelling does not capture an explicit ecological discourse
 In addressing the first research question, a latent dirichlet allocation model could not identify a distinctly environmental topic among our dataset’s documents. When optimising the model to maximise topic coherence, we added additional stopwords to the standard set for English language datasets, going off an initial exploratory analysis of word frequency in product descriptions.
 
@@ -66,6 +78,7 @@ While the model seemed to identify three main topic clusters, it did not pick up
 
 The html version of this LDA visualisation can be found at [Latent_Dirichlet_Allocation_HTML.html](https://github.com/beabrom/green-amazon/blob/main/Latent%20Dirichlet%20Allocation%20HTML.html) – though it is better downloaded locally.
 
+<a name="h2"></a>
 ### H2: There is some variation in the prevalence of ecological words across product categories
 To address the second hypothesis, we used a pre-defined corpus of greenwashing vocabulary to count the occurrence of these tokens, and plotted their prevalence across distinct product categories. Indeed, we found that the average occurrence of ecological and sustainability-related words differed across product categories and search keywords. Comparing the relative occurrence, greenwashing vocabulary seemed to be most prevalent with laundry products, and least prevalent among products intended for disinfecting surfaces. 
 
@@ -73,6 +86,7 @@ To address the second hypothesis, we used a pre-defined corpus of greenwashing v
 
 *Figure 3: A visualisation of greenwashing frequencies per search keyword.*
 
+<a name="h3"></a>
 ### H3: No evidence for systematic compensation for ecologically harmful word embeddings
 The third and final section of our analysis set out to investigate whether a more frequent use of greenwashing vocabulary could be in response to the non-environmental associations a product category inspires, as anticipated by the third hypothesis. First, we sorted the dataset’s search keywords onto a word vector thought to symbolise their extent of implied environmental harm, and plotted the average frequency of greenwashing words in their product descriptions.
 
