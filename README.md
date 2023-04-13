@@ -3,7 +3,11 @@ This repository contains an analysis of ‘greenness’ in product descriptions 
 It was created by Barbora Bromová, Markéta Ovečková, and Šimon Trlifaj for the 2023 CIVICA course Diving in the Digital Public Space.
 
 ## Contents
-This repository includes:
+
+1. [Introduction](##Introduction)
+2. [Research questions & Hypotheses](##Research question & Hypotheses)
+
+This repository also includes:
 - Web scraping pipeline of Amazon product pages based on search keyword ([Amazon_webscrape.ipynb](Amazon_webscrape.ipynb))
 - Analysis of product descriptions and perceived harmfulness ([Amazon_greenwashing_analysis.ipynb](Amazon_greenwashing_analysis.ipynb))
 - Analysis of topic modelling in product descriptions ([Latent_Dirichlet_Analysis_on_product_descriptions.ipynb](Latent_Dirichlet_Analysis_on_product_descriptions.ipynb))
